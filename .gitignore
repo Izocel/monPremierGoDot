@@ -11,3 +11,6 @@ data_*/
 
 # vsCode specific ignores
 .history/
+
+# Spécification de sécurité pour la branche main
+dev/
