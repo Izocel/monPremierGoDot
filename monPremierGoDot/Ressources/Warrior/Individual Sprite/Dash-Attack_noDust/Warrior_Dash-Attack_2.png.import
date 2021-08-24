@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex"
+path="res://.import/Warrior_Dash-Attack_2.png-421d6bd8f99b279e7123364abcab850b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://icon.png"
-dest_files=[ "res://.import/icon.png-487276ed1e3a0c39cad0279d744ee560.stex" ]
+source_file="res://Ressources/Warrior/Individual Sprite/Dash-Attack_noDust/Warrior_Dash-Attack_2.png"
+dest_files=[ "res://.import/Warrior_Dash-Attack_2.png-421d6bd8f99b279e7123364abcab850b.stex" ]
 
 [params]
 
