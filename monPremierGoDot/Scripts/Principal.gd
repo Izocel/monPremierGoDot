@@ -12,8 +12,8 @@ func _ready():
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	print(delta)
-
-func _physics_process(delta):
-	print(delta)
+#func _process(delta):
+#	print(delta)
+#
+#func _physics_process(delta):
+#	print(delta)
