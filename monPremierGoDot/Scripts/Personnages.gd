@@ -3,8 +3,8 @@ extends Acteur
 class_name Personnage
 # Declare member variables here. Examples:
 
-export var hauteurSaut = 1.2
-var PERSO_FLOOR_NORMAL = Vector2(0,-hauteurSaut)
+export var hauteurSaut = 1.0
+var PERSO_FLOOR_NORMAL = Vector2.UP
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
