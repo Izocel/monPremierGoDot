@@ -9,3 +9,5 @@ export_presets.cfg
 data_*/
 
 # vsCode spécification
+dev/
+.history/
