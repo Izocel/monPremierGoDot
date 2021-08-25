@@ -8,9 +8,11 @@ export_presets.cfg
 .mono/
 data_*/
 
+<<<<<<< HEAD
 
 # vsCode specific ignores
 .history/
 
 # Spécification de sécurité pour la branche main
 dev/
+
