@@ -28,11 +28,7 @@ func _physics_process(delta: float) -> void:
 		$AnimationPlayer.play("Courrir")
 	else:
 		$AnimationPlayer.play("Repos")
-		
-	if velocite.y < 0.0:
-		$AnimationPlayer.play("Courrir")
-	else:
-		$AnimationPlayer.play("Repos")
+
 	
 		
 	
