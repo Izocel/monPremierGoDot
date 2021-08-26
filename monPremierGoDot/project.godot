@@ -27,7 +27,7 @@ _global_script_class_icons={
 [application]
 
 config/name="monPremierGoDot"
-run/main_scene="res://Scenes/Principal.tscn"
+run/main_scene="res://Scenes/NiveauTest.tscn"
 config/icon="res://Ressources/icon.png"
 
 [display]
