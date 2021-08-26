@@ -44,11 +44,13 @@ extents = Vector2( 8, 7.82669 )
 [node name="Personnage" type="KinematicBody2D"]
 position = Vector2( 206, 100 )
 script = ExtResource( 2 )
+vitesseMin = Vector2( 900, 900 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
 hframes = 6
 vframes = 17
+frame = 4
 
 [node name="Ombrage*" type="Sprite" parent="."]
 
@@ -58,6 +60,7 @@ anims/Courrir = SubResource( 1 )
 anims/Repos = SubResource( 2 )
 
 [node name="CollisionGlobale" type="CollisionShape2D" parent="."]
+visible = false
 position = Vector2( -7.96654, 4.46822 )
 scale = Vector2( 2, 2 )
 z_index = 1
