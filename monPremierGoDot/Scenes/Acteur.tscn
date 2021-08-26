@@ -44,7 +44,6 @@ extents = Vector2( 8, 7.82669 )
 [node name="Personnage" type="KinematicBody2D"]
 position = Vector2( 206, 100 )
 script = ExtResource( 2 )
-vitesseMin = Vector2( 900, 900 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 1 )
