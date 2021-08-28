@@ -23,15 +23,15 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	
-	var old_direction = direction
+	var old_flip_h = $Sprite.get_indexed("flip_h")
 	
 	var est_saut_interompu = Input.is_action_just_released("Saut") and velocite.y < 0.0
 	direction = avoir_DirectionV2()
 	velocite = velocite_mouvement(velocite, direction, vitesseMin, est_saut_interompu)
 	move_and_slide(velocite, PERSO_FLOOR_NORMAL)
 	
-	if(direction.x != 0 && direction.x != old_direction.x) :
-		
+#	if(direction.x != 0 && direction.x != old_direction.x) :
+	
 
 	#### Animations ####
 	
@@ -48,11 +48,15 @@ func _physics_process(delta: float) -> void:
 	#Gauche
 	if velocite.x > 0:
 		$Sprite.flip_h = false
+		$CollisionShape2D.position.x = -7.00
 	#Droite
 	if velocite.x < 0:
 		$Sprite.flip_h = true
+		$CollisionShape2D.position.x = 7
 		
-	
+		
+	print("Radius: ", $CollisionShape2D.shape.radius)
+	print($CollisionShape2D.position)
 func avoir_directionX() -> float:
 	return Input.get_action_strength("Droite") - Input.get_action_strength("Gauche")
 	
