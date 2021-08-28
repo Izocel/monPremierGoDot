@@ -1,11 +1,17 @@
 extends Acteur
 
 class_name Personnage
-# Declare member variables here. Examples:
+# Déclaré les variables de la classe ici.
 
 export var hauteurSaut = 1.0
 var PERSO_FLOOR_NORMAL = Vector2.UP
+var direction = Vector2.ZERO
 
+const col_radius_ratio = 1.8072
+const col_height_ration = 9.0050
+const col_y_change = 1
+
+	
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	pass # Replace with function body.
@@ -17,19 +23,34 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _physics_process(delta: float) -> void:
 	
+	var old_direction = direction
+	
 	var est_saut_interompu = Input.is_action_just_released("Saut") and velocite.y < 0.0
-	var direction = avoir_DirectionV2()
+	direction = avoir_DirectionV2()
 	velocite = velocite_mouvement(velocite, direction, vitesseMin, est_saut_interompu)
 	move_and_slide(velocite, PERSO_FLOOR_NORMAL)
+	
+	if(direction.x != 0 && direction.x != old_direction.x) :
+		
 
-
-		#Animations
-	if velocite.x != 0:
+	#### Animations ####
+	
+	if velocite.x !=  0:
 		$AnimationPlayer.play("Courrir")
+		
 	else:
 		$AnimationPlayer.play("Repos")
 
 	
+	#Reflexion du HFrame selon direction
+	##Translation du colision box du au "flip"
+	
+	#Gauche
+	if velocite.x > 0:
+		$Sprite.flip_h = false
+	#Droite
+	if velocite.x < 0:
+		$Sprite.flip_h = true
 		
 	
 func avoir_directionX() -> float:
