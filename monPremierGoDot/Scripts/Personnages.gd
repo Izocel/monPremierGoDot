@@ -31,7 +31,7 @@ func _physics_process(delta: float) -> void:
 	move_and_slide(velocite, PERSO_FLOOR_NORMAL)
 	
 #	if(direction.x != 0 && direction.x != old_direction.x) :
-	
+
 
 	#### Animations ####
 	
@@ -71,7 +71,7 @@ func avoir_DirectionV2() -> Vector2:
 	
 func velocite_mouvement(
 		velocite_lineraire : Vector2,
-		direction: Vector2,
+		_direction: Vector2,
 		vitesse: Vector2,
 		est_saut_interompu: bool
 	) -> Vector2:

@@ -27,9 +27,9 @@ _global_script_class_icons={
 [application]
 
 config/name="monPremierGoDot"
-run/main_scene="res://Scenes/NiveauTest.tscn"
+run/main_scene="res://Scenes/Menu_principal.tscn"
 boot_splash/bg_color=Color( 0.27451, 0.305882, 0.388235, 1 )
-config/icon="res://Ressources/icon.png"
+config/icon="res://Ressources/IconesMenu/Options.tres"
 
 [audio]
 
@@ -40,6 +40,7 @@ enable_audio_input=true
 window/size/test_width=1024
 window/size/test_height=600
 window/vsync/use_vsync=false
+mouse_cursor/custom_image="res://Ressources/CursorIcons/0182cd2e.9c143e3f-da86-4736-b0c9-5e2f18c1f6a3.png"
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 window/emulate_touch_from_mouse=false
@@ -120,10 +121,6 @@ Saut={
  ]
 }
 config/icon="res://icon.png"
-
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
 
 [logging]
 
