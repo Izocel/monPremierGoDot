@@ -1,0 +1,404 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://Scripts/MenuPrincipal.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=2]
+[ext_resource path="res://Ressources/Forest Tileset/BG/2.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/RectColorAnime.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scenes/TextBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Buttons/BouttonScene.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Scenes/Acteur.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Niveau1er.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ressources/Fonts/Consolas/static/Inconsolata/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=10]
+[ext_resource path="res://Scenes/NiveauTest.tscn" type="PackedScene" id=11]
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 131, 327, 27, 27 )
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 194, 164, 27, 28 )
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 355, 356, 27, 27 )
+filter_clip = true
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 69, 547, 23, 28 )
+filter_clip = true
+
+[sub_resource type="DynamicFont" id=5]
+size = 23
+use_filter = true
+font_data = ExtResource( 10 )
+
+[sub_resource type="AtlasTexture" id=6]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 323, 419, 27, 27 )
+
+[sub_resource type="AtlasTexture" id=7]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 195, 419, 27, 28 )
+
+[sub_resource type="AtlasTexture" id=8]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 259, 421, 27, 25 )
+
+[sub_resource type="AtlasTexture" id=9]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 388, 419, 26, 27 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 24
+use_filter = true
+font_data = ExtResource( 9 )
+
+[sub_resource type="ConvexPolygonShape2D" id=11]
+points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
+
+[sub_resource type="TileSet" id=12]
+0/name = "2.png 0"
+0/texture = ExtResource( 3 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 16, 16 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 11 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 11 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[node name="EcranTitre" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ArrierePlan" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.188235, 0.196078, 0.258824, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Menu" type="VBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 8.0
+margin_right = -16.0
+margin_bottom = -16.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Banniere" parent="Menu" instance=ExtResource( 5 )]
+margin_left = 361.0
+margin_top = 0.0
+margin_right = 630.0
+margin_bottom = 166.0
+size_flags_horizontal = 4
+
+[node name="LigneCentre" type="HBoxContainer" parent="Menu"]
+margin_top = 170.0
+margin_right = 992.0
+margin_bottom = 402.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Bouttons" type="VBoxContainer" parent="Menu/LigneCentre"]
+margin_right = 245.0
+margin_bottom = 232.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Boutton" parent="Menu/LigneCentre/Bouttons" instance=ExtResource( 6 )]
+margin_right = 245.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+icon = SubResource( 1 )
+scene_a_charger = ExtResource( 8 )
+
+[node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton" index="0"]
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Nouvelle Partie"
+
+[node name="Boutton2" parent="Menu/LigneCentre/Bouttons" instance=ExtResource( 6 )]
+margin_top = 59.0
+margin_right = 245.0
+margin_bottom = 114.0
+icon = SubResource( 2 )
+scene_a_charger = ExtResource( 8 )
+
+[node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton2" index="0"]
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "Continuer"
+
+[node name="Boutton3" parent="Menu/LigneCentre/Bouttons" instance=ExtResource( 6 )]
+margin_top = 118.0
+margin_right = 245.0
+margin_bottom = 173.0
+icon = SubResource( 3 )
+scene_a_charger = ExtResource( 11 )
+
+[node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton3" index="0"]
+text = "Charger"
+
+[node name="Boutton4" parent="Menu/LigneCentre/Bouttons" instance=ExtResource( 6 )]
+margin_top = 177.0
+margin_right = 245.0
+margin_bottom = 232.0
+icon = SubResource( 4 )
+scene_a_charger = ExtResource( 11 )
+
+[node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton4" index="0"]
+text = "Options"
+
+[node name="Offset" type="VBoxContainer" parent="Menu/LigneCentre"]
+margin_left = 249.0
+margin_right = 494.0
+margin_bottom = 232.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Offset2" type="VBoxContainer" parent="Menu/LigneCentre"]
+margin_left = 498.0
+margin_right = 743.0
+margin_bottom = 232.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Offset3" type="VBoxContainer" parent="Menu/LigneCentre"]
+margin_left = 747.0
+margin_right = 992.0
+margin_bottom = 232.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PiedMenu" type="VBoxContainer" parent="Menu"]
+margin_top = 406.0
+margin_right = 992.0
+margin_bottom = 576.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="OptionsMisc" type="HBoxContainer" parent="Menu/PiedMenu"]
+margin_left = 584.0
+margin_top = 69.0
+margin_right = 992.0
+margin_bottom = 110.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 8
+size_flags_vertical = 10
+size_flags_stretch_ratio = 2.0
+custom_constants/separation = 17
+
+[node name="misc1" type="Button" parent="Menu/PiedMenu/OptionsMisc"]
+margin_right = 88.0
+margin_bottom = 41.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+text = "Misc1"
+icon = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="misc2" type="Button" parent="Menu/PiedMenu/OptionsMisc"]
+margin_left = 105.0
+margin_right = 195.0
+margin_bottom = 41.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+text = "Misc2"
+icon = SubResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="misc3" type="Button" parent="Menu/PiedMenu/OptionsMisc"]
+margin_left = 212.0
+margin_right = 302.0
+margin_bottom = 41.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+text = "Misc3"
+icon = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="misc4" type="Button" parent="Menu/PiedMenu/OptionsMisc"]
+margin_left = 319.0
+margin_right = 408.0
+margin_bottom = 41.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 5 )
+text = "Misc4"
+icon = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="infosBox" type="ColorRect" parent="Menu/PiedMenu"]
+margin_top = 114.0
+margin_right = 992.0
+margin_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.305882, 0.305882, 0.305882, 0.392157 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfoGen" type="VBoxContainer" parent="Menu/PiedMenu/infosBox"]
+margin_right = 992.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/PiedMenu/infosBox/InfoGen"]
+margin_right = 992.0
+margin_bottom = 55.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_constants/separation = 64
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfosJeu" type="Label" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer"]
+margin_right = 156.0
+margin_bottom = 55.0
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 10 )
+text = "XeniaK
+Version: 1.02"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer"]
+margin_left = 220.0
+margin_top = 14.0
+margin_right = 574.0
+margin_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 7
+size_flags_vertical = 4
+
+[node name="InfosJeu3" type="Label" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer/VBoxContainer"]
+margin_left = 69.0
+margin_right = 285.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 118, 5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 10 )
+text = "Dévloppeur: R.V.Ð."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer"]
+margin_left = 638.0
+margin_top = 14.0
+margin_right = 992.0
+margin_bottom = 40.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 7
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InfosJeu3" type="Label" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer/VBoxContainer2"]
+margin_left = 15.0
+margin_right = 339.0
+margin_bottom = 26.0
+rect_pivot_offset = Vector2( 118, 5 )
+size_flags_horizontal = 4
+custom_fonts/font = SubResource( 10 )
+text = "Tous droits réservés ~ 2022"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = SubResource( 12 )
+cell_size = Vector2( 16, 16 )
+cell_quadrant_size = 1
+cell_custom_transform = Transform2D( 0, 0, 0, 0, 0, 0 )
+show_collision = true
+format = 1
+tile_data = PoolIntArray( 393279, 0, 0, 458815, 0, 0, 524351, 0, 0, 589887, 0, 0, 655360, 0, 0, 655361, 0, 0, 655362, 0, 0, 655363, 0, 0, 655364, 0, 0, 655365, 0, 0, 655366, 0, 0, 655367, 0, 0, 655368, 0, 0, 655369, 0, 0, 655370, 0, 0, 655371, 0, 0, 655372, 0, 0, 655373, 0, 0, 655374, 0, 0, 655375, 0, 0, 655376, 0, 0, 655423, 0, 0, 720912, 0, 0, 720959, 0, 0, 786448, 0, 0, 786495, 0, 0, 851984, 0, 0, 852031, 0, 0, 917517, 0, 0, 917518, 0, 0, 917519, 0, 0, 917520, 0, 0, 917567, 0, 0, 983052, 0, 0, 983053, 0, 0, 983082, 0, 0, 983083, 0, 0, 983084, 0, 0, 983085, 0, 0, 983086, 0, 0, 983087, 0, 0, 983088, 0, 0, 983089, 0, 0, 983090, 0, 0, 983103, 0, 0, 1048588, 0, 0, 1048624, 0, 0, 1048625, 0, 0, 1048626, 0, 0, 1048639, 0, 0, 1114124, 0, 0, 1114139, 0, 0, 1114140, 0, 0, 1114141, 0, 0, 1114142, 0, 0, 1114143, 0, 0, 1114144, 0, 0, 1114145, 0, 0, 1114146, 0, 0, 1114147, 0, 0, 1114148, 0, 0, 1114162, 0, 0, 1114163, 0, 0, 1114164, 0, 0, 1114165, 0, 0, 1114175, 0, 0, 1179660, 0, 0, 1179675, 0, 0, 1179676, 0, 0, 1179677, 0, 0, 1179678, 0, 0, 1179679, 0, 0, 1179680, 0, 0, 1179681, 0, 0, 1179682, 0, 0, 1179683, 0, 0, 1179684, 0, 0, 1179711, 0, 0, 1245195, 0, 0, 1245196, 0, 0, 1245211, 0, 0, 1245212, 0, 0, 1245213, 0, 0, 1245214, 0, 0, 1245215, 0, 0, 1245216, 0, 0, 1245217, 0, 0, 1245218, 0, 0, 1245219, 0, 0, 1245220, 0, 0, 1245244, 0, 0, 1245245, 0, 0, 1245246, 0, 0, 1245247, 0, 0, 1310731, 0, 0, 1310783, 0, 0, 1376267, 0, 0, 1376319, 0, 0, 1441792, 0, 0, 1441793, 0, 0, 1441794, 0, 0, 1441795, 0, 0, 1441796, 0, 0, 1441797, 0, 0, 1441798, 0, 0, 1441799, 0, 0, 1441800, 0, 0, 1441801, 0, 0, 1441802, 0, 0, 1441855, 0, 0, 1507328, 0, 0, 1507379, 0, 0, 1507380, 0, 0, 1507381, 0, 0, 1507382, 0, 0, 1507383, 0, 0, 1507391, 0, 0, 1572864, 0, 0, 1572927, 0, 0, 1638400, 0, 0, 1638463, 0, 0, 1703936, 0, 0, 1703999, 0, 0, 1769472, 0, 0, 1769535, 0, 0, 1835008, 0, 0, 1835071, 0, 0, 1900544, 0, 0, 1900581, 0, 0, 1900582, 0, 0, 1900583, 0, 0, 1900584, 0, 0, 1900585, 0, 0, 1900586, 0, 0, 1900587, 0, 0, 1900588, 0, 0, 1900589, 0, 0, 1900590, 0, 0, 1900591, 0, 0, 1900592, 0, 0, 1900593, 0, 0, 1900594, 0, 0, 1900595, 0, 0, 1900596, 0, 0, 1900597, 0, 0, 1900598, 0, 0, 1900599, 0, 0, 1900600, 0, 0, 1900601, 0, 0, 1900602, 0, 0, 1900603, 0, 0, 1900604, 0, 0, 1900605, 0, 0, 1900606, 0, 0, 1900607, 0, 0, 1966080, 0, 0, 1966117, 0, 0, 2031616, 0, 0, 2031653, 0, 0, 2097152, 0, 0, 2097153, 0, 0, 2097154, 0, 0, 2097155, 0, 0, 2097156, 0, 0, 2097157, 0, 0, 2097158, 0, 0, 2097159, 0, 0, 2097160, 0, 0, 2097161, 0, 0, 2097162, 0, 0, 2097163, 0, 0, 2097164, 0, 0, 2097165, 0, 0, 2097166, 0, 0, 2097167, 0, 0, 2097168, 0, 0, 2097169, 0, 0, 2097170, 0, 0, 2097171, 0, 0, 2097172, 0, 0, 2097173, 0, 0, 2097174, 0, 0, 2097175, 0, 0, 2097176, 0, 0, 2097177, 0, 0, 2097178, 0, 0, 2097179, 0, 0, 2097180, 0, 0, 2097181, 0, 0, 2097182, 0, 0, 2097183, 0, 0, 2097184, 0, 0, 2097185, 0, 0, 2097186, 0, 0, 2097187, 0, 0, 2097188, 0, 0, 2097189, 0, 0 )
+
+[node name="Personnage" parent="." instance=ExtResource( 7 )]
+position = Vector2( 432, 454 )
+scale = Vector2( 2.5, 2.5 )
+z_index = -1
+collision/safe_margin = 0.1
+vitesseMin = Vector2( 200, 200 )
+gravite = 200.0
+
+[node name="ColorRect" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[connection signal="animation_fin" from="ColorRect" to="." method="_colorRect_animation_fin"]
+
+[editable path="Menu/LigneCentre/Bouttons/Boutton"]
+[editable path="Menu/LigneCentre/Bouttons/Boutton2"]
+[editable path="Menu/LigneCentre/Bouttons/Boutton3"]
+[editable path="Menu/LigneCentre/Bouttons/Boutton4"]

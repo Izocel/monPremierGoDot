@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Random-Processes_Looping.mp3-a03059a10677fe88b59da369f0d7515b.mp3str"
+
+[deps]
+
+source_file="res://dev/audio/tounes/Random-Processes_Looping.mp3"
+dest_files=[ "res://.import/Random-Processes_Looping.mp3-a03059a10677fe88b59da369f0d7515b.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

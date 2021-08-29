@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boss-Battle_Looping.mp3-e35caf8fdfe6d3e07d2c666860c4f54d.mp3str"
+
+[deps]
+
+source_file="res://dev/audio/tounes/Boss-Battle_Looping.mp3"
+dest_files=[ "res://.import/Boss-Battle_Looping.mp3-e35caf8fdfe6d3e07d2c666860c4f54d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

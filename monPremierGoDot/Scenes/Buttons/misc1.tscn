@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=1]
+[ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 23
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 323, 419, 27, 27 )
+
+[node name="misc1" type="Button"]
+margin_right = 88.0
+margin_bottom = 41.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+custom_fonts/font = SubResource( 1 )
+text = "Misc1"
+icon = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

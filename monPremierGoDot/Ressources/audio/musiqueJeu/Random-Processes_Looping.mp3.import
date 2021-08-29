@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Random-Processes_Looping.mp3-fe7c2437f963396b7967de3033a61dda.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/musiqueJeu/Random-Processes_Looping.mp3"
+dest_files=[ "res://.import/Random-Processes_Looping.mp3-fe7c2437f963396b7967de3033a61dda.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

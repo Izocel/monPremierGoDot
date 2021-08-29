@@ -14,6 +14,16 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Acteur.gd"
 }, {
+"base": "Control",
+"class": "BouttonScene",
+"language": "GDScript",
+"path": "res://Scripts/Buttons/BouttonScene.gd"
+}, {
+"base": "Node",
+"class": "MenuPrincipal",
+"language": "GDScript",
+"path": "res://Scripts/MenuPrincipal.gd"
+}, {
 "base": "Acteur",
 "class": "Personnage",
 "language": "GDScript",
@@ -21,13 +31,15 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Acteur": "",
+"BouttonScene": "",
+"MenuPrincipal": "",
 "Personnage": ""
 }
 
 [application]
 
 config/name="monPremierGoDot"
-run/main_scene="res://Scenes/Menu_principal.tscn"
+run/main_scene="res://Scenes/MenuPrincipal.tscn"
 boot_splash/bg_color=Color( 0.27451, 0.305882, 0.388235, 1 )
 config/icon="res://Ressources/IconesMenu/Options.tres"
 

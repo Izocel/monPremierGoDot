@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Gigakoops - Level 4 - Village.mp3-b3b80159e4b5cdc42f4bf7743299bed7.mp3str"
+
+[deps]
+
+source_file="res://dev/audio/tounes/Gigakoops - Level 4 - Village.mp3"
+dest_files=[ "res://.import/Gigakoops - Level 4 - Village.mp3-b3b80159e4b5cdc42f4bf7743299bed7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
