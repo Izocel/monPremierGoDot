@@ -4,7 +4,7 @@
 [ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=2]
 [ext_resource path="res://Ressources/Forest Tileset/BG/2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/RectColorAnime.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/TextBox.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Scenes/Banniere.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Buttons/BouttonScene.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Acteur.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Niveau1er.tscn" type="PackedScene" id=8]
@@ -349,6 +349,7 @@ size_flags_horizontal = 4
 custom_fonts/font = SubResource( 10 )
 text = "XeniaK
 Version: 1.02"
+align = 1
 valign = 1
 __meta__ = {
 "_edit_use_anchors_": false
