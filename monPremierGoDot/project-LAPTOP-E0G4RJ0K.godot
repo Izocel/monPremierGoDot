@@ -14,26 +14,6 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Acteur.gd"
 }, {
-"base": "Control",
-"class": "BouttonScene",
-"language": "GDScript",
-"path": "res://Scripts/Buttons/BouttonScene.gd"
-}, {
-"base": "Control",
-"class": "MenuOption",
-"language": "GDScript",
-"path": "res://Scripts/MenuOption.gd"
-}, {
-"base": "Node",
-"class": "MenuPrincipal",
-"language": "GDScript",
-"path": "res://Scripts/MenuPrincipal.gd"
-}, {
-"base": "Node",
-"class": "Niveau",
-"language": "GDScript",
-"path": "res://Scripts/Niveau1er.gd"
-}, {
 "base": "Acteur",
 "class": "Personnage",
 "language": "GDScript",
@@ -41,20 +21,15 @@ _global_script_classes=[ {
 } ]
 _global_script_class_icons={
 "Acteur": "",
-"BouttonScene": "",
-"MenuOption": "",
-"MenuPrincipal": "",
-"Niveau": "",
 "Personnage": ""
 }
 
 [application]
 
 config/name="monPremierGoDot"
-run/main_scene="res://Scenes/MenuPrincipal.tscn"
+run/main_scene="res://Scenes/NiveauTest.tscn"
 boot_splash/bg_color=Color( 0.27451, 0.305882, 0.388235, 1 )
-config/icon="res://Ressources/IconesMenu/Options.tres"
-config/Version="1.0.2"
+config/icon="res://Ressources/icon.png"
 
 [audio]
 
@@ -65,15 +40,9 @@ enable_audio_input=true
 window/size/test_width=1024
 window/size/test_height=600
 window/vsync/use_vsync=false
-mouse_cursor/custom_image="res://Ressources/CursorIcons/defCursor.png"
-mouse_cursor/custom_image_hotspot=Vector2( 30, 0 )
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 window/emulate_touch_from_mouse=false
-
-[global]
-
-Version=""
 
 [input]
 
@@ -151,6 +120,10 @@ Saut={
  ]
 }
 config/icon="res://icon.png"
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [logging]
 

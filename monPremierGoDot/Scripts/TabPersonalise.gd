@@ -1,6 +1,6 @@
 # src: https://godotengine.org/qa/3196/how-add-subcategories-inspector-script-variables-section
 tool
-extends Container
+extends Control
 
 const PropertyList = preload("res://Scripts/ListePropriete.gd")
 

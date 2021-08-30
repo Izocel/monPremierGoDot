@@ -1,10 +1,9 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://Scripts/MenuOption.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=2]
 [ext_resource path="res://Ressources/Forest Tileset/BG/2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/RectColorAnime.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Scenes/Banniere.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/CustomTabContainer.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Scenes/Acteur.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Ressources/Fonts/Consolas/static/Inconsolata/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=9]
@@ -111,29 +110,12 @@ __meta__ = {
 [node name="ArrierePlan" type="ColorRect" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
 color = Color( 0.188235, 0.196078, 0.258824, 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="LigneBanniere" type="VBoxContainer" parent="."]
-margin_left = 16.0
-margin_top = 217.0
-margin_right = 1008.0
-margin_bottom = 383.0
-size_flags_horizontal = 9
-size_flags_vertical = 9
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="Banniere" parent="LigneBanniere" instance=ExtResource( 5 )]
-margin_left = 0.0
-margin_top = 0.0
-margin_right = 992.0
-margin_bottom = 166.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
 
 [node name="Menu" type="VBoxContainer" parent="."]
 anchor_right = 1.0
@@ -141,31 +123,34 @@ anchor_bottom = 1.0
 margin_left = 16.0
 margin_top = 24.0
 margin_right = -16.0
-margin_bottom = -24.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
+size_flags_horizontal = 0
+size_flags_vertical = 0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="TabContainer" parent="Menu" instance=ExtResource( 6 )]
+[node name="CustomTabPanel" parent="Menu" instance=ExtResource( 6 )]
 anchor_right = 0.0
 anchor_bottom = 0.0
-margin_top = 0.0
 margin_right = 992.0
-margin_bottom = 0.0
+margin_bottom = 472.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
 
 [node name="PiedMenu" type="VBoxContainer" parent="Menu"]
-margin_top = 4.0
+margin_top = 476.0
 margin_right = 992.0
-margin_bottom = 552.0
-size_flags_vertical = 3
+margin_bottom = 576.0
+size_flags_horizontal = 3
+size_flags_vertical = 4
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="OptionsMisc" type="HBoxContainer" parent="Menu/PiedMenu"]
 margin_left = 584.0
-margin_top = 321.0
 margin_right = 992.0
-margin_bottom = 362.0
+margin_bottom = 41.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 8
@@ -224,31 +209,10 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="infosBox" type="ColorRect" parent="Menu/PiedMenu"]
-margin_top = 366.0
+[node name="HBoxContainer" type="HBoxContainer" parent="Menu/PiedMenu"]
+margin_top = 45.0
 margin_right = 992.0
-margin_bottom = 548.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 3
-size_flags_vertical = 3
-color = Color( 0.305882, 0.305882, 0.305882, 0.392157 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="InfoGen" type="VBoxContainer" parent="Menu/PiedMenu/infosBox"]
-margin_right = 992.0
-margin_bottom = 55.0
-size_flags_horizontal = 3
-size_flags_vertical = 3
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Menu/PiedMenu/infosBox/InfoGen"]
-margin_right = 992.0
-margin_bottom = 55.0
+margin_bottom = 100.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
 custom_constants/separation = 64
@@ -256,7 +220,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="InfosJeu" type="Label" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer"]
+[node name="InfosJeu" type="Label" parent="Menu/PiedMenu/HBoxContainer"]
 margin_right = 156.0
 margin_bottom = 55.0
 size_flags_horizontal = 4
@@ -269,7 +233,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Menu/PiedMenu/HBoxContainer"]
 margin_left = 220.0
 margin_top = 14.0
 margin_right = 574.0
@@ -279,7 +243,7 @@ grow_vertical = 0
 size_flags_horizontal = 7
 size_flags_vertical = 4
 
-[node name="InfosJeu3" type="Label" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer/VBoxContainer"]
+[node name="InfosJeu3" type="Label" parent="Menu/PiedMenu/HBoxContainer/VBoxContainer"]
 margin_left = 69.0
 margin_right = 285.0
 margin_bottom = 26.0
@@ -293,7 +257,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer"]
+[node name="VBoxContainer2" type="VBoxContainer" parent="Menu/PiedMenu/HBoxContainer"]
 margin_left = 638.0
 margin_top = 14.0
 margin_right = 992.0
@@ -306,7 +270,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="InfosJeu3" type="Label" parent="Menu/PiedMenu/infosBox/InfoGen/HBoxContainer/VBoxContainer2"]
+[node name="InfosJeu3" type="Label" parent="Menu/PiedMenu/HBoxContainer/VBoxContainer2"]
 margin_left = 15.0
 margin_right = 339.0
 margin_bottom = 26.0
@@ -324,7 +288,7 @@ __meta__ = {
 visible = false
 
 [node name="TileMap" type="TileMap" parent="."]
-position = Vector2( 0, 8 )
+position = Vector2( 0, 104 )
 tile_set = SubResource( 8 )
 cell_size = Vector2( 16, 16 )
 cell_quadrant_size = 1
@@ -334,7 +298,7 @@ format = 1
 tile_data = PoolIntArray( 1507329, 0, 0, 1507330, 0, 0, 1507331, 0, 0, 1507332, 0, 0, 1507333, 0, 0, 1507334, 0, 0, 1507335, 0, 0, 1507336, 0, 0, 1507337, 0, 0, 1507338, 0, 0, 1507339, 0, 0, 1507340, 0, 0, 1507341, 0, 0, 1507342, 0, 0, 1507343, 0, 0, 1507344, 0, 0, 1507345, 0, 0, 1507346, 0, 0, 1507347, 0, 0, 1507348, 0, 0, 1507349, 0, 0, 1507350, 0, 0, 1507351, 0, 0, 1507352, 0, 0, 1507353, 0, 0, 1507354, 0, 0, 1507355, 0, 0, 1507356, 0, 0, 1507357, 0, 0, 1507358, 0, 0, 1507359, 0, 0, 1507360, 0, 0, 1507361, 0, 0, 1507362, 0, 0, 1507363, 0, 0, 1507364, 0, 0, 1572864, 0, 0, 1572901, 0, 0, 1638400, 0, 0, 1638437, 0, 0, 1703936, 0, 0, 1703973, 0, 0, 1769472, 0, 0, 1769509, 0, 0, 1835008, 0, 0, 1835045, 0, 0, 1900544, 0, 0, 1900581, 0, 0, 1966081, 0, 0, 1966082, 0, 0, 1966083, 0, 0, 1966084, 0, 0, 1966085, 0, 0, 1966086, 0, 0, 1966087, 0, 0, 1966088, 0, 0, 1966089, 0, 0, 1966090, 0, 0, 1966091, 0, 0, 1966092, 0, 0, 1966093, 0, 0, 1966094, 0, 0, 1966095, 0, 0, 1966096, 0, 0, 1966097, 0, 0, 1966098, 0, 0, 1966099, 0, 0, 1966100, 0, 0, 1966101, 0, 0, 1966102, 0, 0, 1966103, 0, 0, 1966104, 0, 0, 1966105, 0, 0, 1966106, 0, 0, 1966107, 0, 0, 1966108, 0, 0, 1966109, 0, 0, 1966110, 0, 0, 1966111, 0, 0, 1966112, 0, 0, 1966113, 0, 0, 1966114, 0, 0, 1966115, 0, 0, 1966116, 0, 0 )
 
 [node name="Personnage" parent="." instance=ExtResource( 7 )]
-position = Vector2( 344, 432 )
+position = Vector2( 248, 520 )
 scale = Vector2( 2.5, 2.5 )
 z_index = -1
 collision/safe_margin = 0.1
