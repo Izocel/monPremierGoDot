@@ -19,10 +19,20 @@ _global_script_classes=[ {
 "language": "GDScript",
 "path": "res://Scripts/Buttons/BouttonScene.gd"
 }, {
+"base": "Control",
+"class": "MenuOption",
+"language": "GDScript",
+"path": "res://Scripts/MenuOption.gd"
+}, {
 "base": "Node",
 "class": "MenuPrincipal",
 "language": "GDScript",
 "path": "res://Scripts/MenuPrincipal.gd"
+}, {
+"base": "Node",
+"class": "Niveau",
+"language": "GDScript",
+"path": "res://Scripts/Niveau1er.gd"
 }, {
 "base": "Acteur",
 "class": "Personnage",
@@ -32,7 +42,9 @@ _global_script_classes=[ {
 _global_script_class_icons={
 "Acteur": "",
 "BouttonScene": "",
+"MenuOption": "",
 "MenuPrincipal": "",
+"Niveau": "",
 "Personnage": ""
 }
 

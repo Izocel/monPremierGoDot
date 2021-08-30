@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://Scripts/MenuPrincipal.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=2]
@@ -10,7 +10,8 @@
 [ext_resource path="res://Scenes/Niveau1er.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Ressources/Fonts/Consolas/static/Inconsolata/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=10]
-[ext_resource path="res://Scenes/NiveauTest.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Scenes/MenuOption.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Ressources/audio/musiqueJeu/Fantasy-Forest-Battle.mp3" type="AudioStream" id=13]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -92,6 +93,36 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 } ]
 0/z_index = 0
 
+[sub_resource type="Animation" id=13]
+length = 122.75
+loop = true
+tracks/0/type = "audio"
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"clips": [ {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource( 13 )
+} ],
+"times": PoolRealArray( 0 )
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:bus")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ "MusiqueScene" ]
+}
+
 [node name="EcranTitre" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -161,7 +192,6 @@ margin_top = 59.0
 margin_right = 245.0
 margin_bottom = 114.0
 icon = SubResource( 2 )
-scene_a_charger = ExtResource( 8 )
 
 [node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton2" index="0"]
 grow_horizontal = 0
@@ -175,7 +205,6 @@ margin_top = 118.0
 margin_right = 245.0
 margin_bottom = 173.0
 icon = SubResource( 3 )
-scene_a_charger = ExtResource( 11 )
 
 [node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton3" index="0"]
 text = "Charger"
@@ -395,6 +424,15 @@ gravite = 200.0
 
 [node name="ColorRect" parent="." instance=ExtResource( 4 )]
 visible = false
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+volume_db = -3.0
+autoplay = true
+bus = "MusiqueScene"
+
+[node name="GestionaireMusique" type="AnimationPlayer" parent="AudioStreamPlayer"]
+anims/Intro_loop = SubResource( 13 )
 
 [connection signal="animation_fin" from="ColorRect" to="." method="_colorRect_animation_fin"]
 

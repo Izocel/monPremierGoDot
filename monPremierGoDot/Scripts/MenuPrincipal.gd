@@ -6,17 +6,18 @@ var chemin_scene
 
 func _ready():
 	for button in $Menu/LigneCentre/Bouttons.get_children():
-		var btn = button as BouttonScene
-		if(btn is BouttonScene):
-			btn.connect("pressed", self, "lanceurScene", [btn.scene_a_charger])
+		if(button is BouttonScene):
+			button.connect("pressed", self, "lanceurScene",[button.scene_a_charger])
 
 
-func lanceurScene(scene):
-	scene as PackedScene
-	chemin_scene = scene.get_path()
+func lanceurScene(scene_a_charger):
+	chemin_scene = scene_a_charger.get_path()
 	
-	$ColorRect.show()
-	$ColorRect.fondu_entre()
+	if(scene_a_charger is Niveau):
+		$ColorRect.show()
+		$ColorRect.fondu_entre()
+	else:
+		get_tree().change_scene(chemin_scene)
 
 
 func _colorRect_animation_fin() -> void:
