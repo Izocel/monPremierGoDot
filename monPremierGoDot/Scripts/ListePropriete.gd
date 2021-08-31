@@ -5,7 +5,7 @@ var properties = {}
 
 func add(name, type, default_value, hint):
 	properties[name] = {
-		"hint": PROPERTY_HINT_PLACEHOLDER_TEXT,
+		"hint": PROPERTY_HINT_NONE,
 		"usage": PROPERTY_USAGE_DEFAULT,
 		"name": name,
 		"type": type,
@@ -18,6 +18,7 @@ func get(name):
 func set(name, value):
 	if properties.has(name):
 		properties[name].value = value
+		property_list_changed_notify()
 
 func _init(list):
 	for prop in list:
