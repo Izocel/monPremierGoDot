@@ -9,7 +9,7 @@ const PropertyList = preload("res://Scripts/ListePropriete.gd")
 var bussArr = getAllBusesChannel()
 
 export(AudioBusLayout) var Layout = AudioServer.generate_bus_layout()
-export(String) var CanalSortie = "Master"
+export(String) var CanalSortie = bussArr[0]
 
 var property_list = PropertyList.new([
 	["CannauxDisponibles/Défaults",TYPE_ARRAY,bussArr,""]
@@ -37,13 +37,13 @@ func _ready() -> void:
 	pass # Replace with function body.
 
 
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
 	if(hasChanged):
 		updateSliderLabel()
 		
-
 
 func _on_vol_changed(value: int) -> void:
 	hasChanged = true
@@ -56,6 +56,7 @@ func updateSliderLabel():
 	hasChanged = false
 	
 func updateAudioDB(layout, canalSortie, value):
+	print(layout, "  ", canalSortie, "  ", value)
 	var busIdx = AudioServer.get_bus_index(canalSortie)
 	var dbScale86Val = 20*log(value/100)
 	

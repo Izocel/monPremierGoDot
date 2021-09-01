@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Scripts/MenuOption.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=2]
@@ -65,37 +65,6 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 "shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
 } ]
 0/z_index = 0
-
-[sub_resource type="Animation" id=9]
-resource_name = "Intro_loop"
-length = 122.75
-loop = true
-tracks/0/type = "audio"
-tracks/0/path = NodePath(".")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/keys = {
-"clips": [ {
-"end_offset": 0.0,
-"start_offset": 0.0,
-"stream": ExtResource( 13 )
-} ],
-"times": PoolRealArray( 0 )
-}
-tracks/1/type = "value"
-tracks/1/path = NodePath(".:bus")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/keys = {
-"times": PoolRealArray( 0 ),
-"transitions": PoolRealArray( 1 ),
-"update": 1,
-"values": [ "MusiqueScene" ]
-}
 
 [node name="EcranOptions" type="Control"]
 anchor_right = 1.0
@@ -306,11 +275,9 @@ vitesseMin = Vector2( 200, 200 )
 gravite = 200.0
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+process_priority = 2
 stream = ExtResource( 13 )
-volume_db = -3.0
-bus = "MusiqueScene"
-
-[node name="GestionaireMusique" type="AnimationPlayer" parent="AudioStreamPlayer"]
-anims/Intro_loop = SubResource( 9 )
+autoplay = true
+bus = "MasterMusique"
 
 [connection signal="animation_fin" from="ColorRect" to="." method="_colorRect_animation_fin"]

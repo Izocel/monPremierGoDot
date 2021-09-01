@@ -430,7 +430,6 @@ visible = false
 stream = ExtResource( 13 )
 volume_db = -3.0
 autoplay = true
-bus = "MusiqueScene"
 
 [node name="GestionaireMusique" type="AnimationPlayer" parent="AudioStreamPlayer"]
 anims/Intro_loop = SubResource( 13 )
