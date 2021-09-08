@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Monster_06.wav-0d652cf07adf9b6a336f881ee5dec718.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Wav/Monster_06.wav"
+dest_files=[ "res://.import/Monster_06.wav-0d652cf07adf9b6a336f881ee5dec718.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

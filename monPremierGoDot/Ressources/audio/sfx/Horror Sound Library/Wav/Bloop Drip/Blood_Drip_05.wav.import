@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Blood_Drip_05.wav-a9573482c492eec7d54d02f4a90ffc0c.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Wav/Bloop Drip/Blood_Drip_05.wav"
+dest_files=[ "res://.import/Blood_Drip_05.wav-a9573482c492eec7d54d02f4a90ffc0c.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Stab_Knife_02.mp3-1b19292688d34b0086f7810a9c3c8840.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Stab_Knife_02.mp3"
+dest_files=[ "res://.import/Stab_Knife_02.mp3-1b19292688d34b0086f7810a9c3c8840.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

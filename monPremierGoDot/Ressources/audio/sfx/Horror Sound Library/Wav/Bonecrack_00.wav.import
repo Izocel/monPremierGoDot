@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Bonecrack_00.wav-3c8ed8c6c0bd0f90601e2af2b65f7ac9.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Wav/Bonecrack_00.wav"
+dest_files=[ "res://.import/Bonecrack_00.wav-3c8ed8c6c0bd0f90601e2af2b65f7ac9.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/qubodupItemHandling4.wav-37e042c3c6bc9c273a6ad9c933962e92.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/qubodupItemHandling/qubodupItemHandling4.wav"
+dest_files=[ "res://.import/qubodupItemHandling4.wav-37e042c3c6bc9c273a6ad9c933962e92.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Blood_Dripping_Loop_01.mp3-627f440c4e6cb953555a3b7a71dcf708.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Blood_Dripping_Loop_01.mp3"
+dest_files=[ "res://.import/Blood_Dripping_Loop_01.mp3-627f440c4e6cb953555a3b7a71dcf708.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

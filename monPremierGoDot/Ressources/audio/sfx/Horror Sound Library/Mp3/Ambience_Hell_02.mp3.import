@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Ambience_Hell_02.mp3-d898e2dbc0a3f4ce0853a26078756afa.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Ambience_Hell_02.mp3"
+dest_files=[ "res://.import/Ambience_Hell_02.mp3-d898e2dbc0a3f4ce0853a26078756afa.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

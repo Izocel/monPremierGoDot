@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Bonecrack_01.mp3-8b32d56c4214cbcd45bb9cfd4879b88e.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Bonecrack_01.mp3"
+dest_files=[ "res://.import/Bonecrack_01.mp3-8b32d56c4214cbcd45bb9cfd4879b88e.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

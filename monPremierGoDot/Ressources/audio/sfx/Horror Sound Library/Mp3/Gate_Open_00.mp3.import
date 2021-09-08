@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Gate_Open_00.mp3-694f8b1656b814140263d6d6f6e340f6.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Gate_Open_00.mp3"
+dest_files=[ "res://.import/Gate_Open_00.mp3-694f8b1656b814140263d6d6f6e340f6.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

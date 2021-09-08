@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Zombie_03.mp3-8cc2bc951a27e108862b9ba0b48f77ab.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Zombie_03.mp3"
+dest_files=[ "res://.import/Zombie_03.mp3-8cc2bc951a27e108862b9ba0b48f77ab.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

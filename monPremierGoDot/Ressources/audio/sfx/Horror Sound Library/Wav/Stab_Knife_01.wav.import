@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Stab_Knife_01.wav-f2e9d5718cf8bd57c74632a176f1f850.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Wav/Stab_Knife_01.wav"
+dest_files=[ "res://.import/Stab_Knife_01.wav-f2e9d5718cf8bd57c74632a176f1f850.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

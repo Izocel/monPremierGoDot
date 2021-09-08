@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Ambience_MonstersBelly_00.wav-862e63f50a0ff7145d0ec0ab09668877.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Wav/Ambience_MonstersBelly_00.wav"
+dest_files=[ "res://.import/Ambience_MonstersBelly_00.wav-862e63f50a0ff7145d0ec0ab09668877.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
