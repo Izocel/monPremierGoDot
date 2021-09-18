@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Ressources/kunai pronta small.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/kunai.gd" type="Script" id=2]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ) ],
+"loop": false,
+"name": "default",
+"speed": 5.0
+} ]
+
+[node name="Kinematic2D" type="RigidBody2D"]
+collision_layer = 525313
+collision_mask = 525313
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="."]
+position = Vector2( 2.34375, -0.117187 )
+scale = Vector2( 0.625, 0.625 )
+polygon = PoolVector2Array( -0.812017, 4.23166, 6.48665, 0.179729, -0.737996, -3.83063, -3.976, -0.82704, -11.7632, -0.831906, -13.7096, -1.14353, -13.6997, 1.53521, -11.7588, 1.1869, -3.97173, 1.20015 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+position = Vector2( 2.38419e-07, 0 )
+scale = Vector2( 0.005, 0.005 )
+frames = SubResource( 1 )
+playing = true
+
+[connection signal="body_entered" from="." to="." method="on_Kunai_Colision"]

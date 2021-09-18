@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Boss-Battle_Looping.mp3-7eed074607b51db5adbadfb51cb355d7.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/musiqueJeu/Boss-Battle_Looping.mp3"
+dest_files=[ "res://.import/Boss-Battle_Looping.mp3-7eed074607b51db5adbadfb51cb355d7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

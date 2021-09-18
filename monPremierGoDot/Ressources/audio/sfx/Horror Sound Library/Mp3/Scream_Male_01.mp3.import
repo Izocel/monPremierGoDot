@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Scream_Male_01.mp3-1d25e7d93ffba55e94fd2c4a98fe9c99.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Scream_Male_01.mp3"
+dest_files=[ "res://.import/Scream_Male_01.mp3-1d25e7d93ffba55e94fd2c4a98fe9c99.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

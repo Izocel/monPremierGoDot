@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Gigakoops - Level 2 - High Clouds.mp3-6f7c06799d8290ed3b27d25e3b028b32.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/musiqueJeu/Gigakoops - Level 2 - High Clouds.mp3"
+dest_files=[ "res://.import/Gigakoops - Level 2 - High Clouds.mp3-6f7c06799d8290ed3b27d25e3b028b32.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

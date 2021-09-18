@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Scenes/CustomSlider.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ressources/Fonts/Consolas/Inconsolata-VariableFont_wdth,wght.ttf" type="DynamicFontData" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_filter = true
+font_data = ExtResource( 3 )
+
+[node name="LabeledISlider" type="HBoxContainer"]
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+margin_top = -300.0
+margin_bottom = -265.0
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 4
+custom_constants/separation = 128
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_right = 96.0
+margin_bottom = 35.0
+size_flags_horizontal = 0
+custom_fonts/font = SubResource( 1 )
+text = "Maître"
+valign = 1
+
+[node name="CustomVolSlider" parent="." instance=ExtResource( 1 )]
+margin_left = 224.0
+margin_right = 524.0
+margin_bottom = 35.0

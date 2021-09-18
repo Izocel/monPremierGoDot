@@ -1,0 +1,353 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=1]
+[ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/Buttons/misc1.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Ressources/Fonts/DynamikPerso/tabsFontMenuOption.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Scripts/ListePropriete.gd" type="Script" id=5]
+[ext_resource path="res://Scenes/Vscroller.tscn" type="PackedScene" id=6]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+size = 12
+use_filter = true
+font_data = ExtResource( 2 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 1 )
+region = Rect2( 323, 419, 27, 27 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 0
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContainer" type="TabContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+custom_styles/panel = SubResource( 1 )
+custom_fonts/font = ExtResource( 4 )
+custom_colors/font_color_disabled = Color( 1, 0, 0, 1 )
+custom_colors/font_color_bg = Color( 0.870588, 0.870588, 0.870588, 1 )
+custom_colors/font_color_fg = Color( 1, 1, 1, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CustomTab" type="Tabs" parent="TabContainer"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabBorder" type="ReferenceRect" parent="TabContainer/CustomTab"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -6.0
+margin_bottom = -6.0
+rect_scale = Vector2( 0.993909, 0.920094 )
+size_flags_horizontal = 0
+size_flags_vertical = 3
+border_color = Color( 0.0784314, 0.0666667, 0.0666667, 1 )
+border_width = 24.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContent" type="ColorRect" parent="TabContainer/CustomTab/TabBorder"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 12.0
+margin_top = 12.0
+margin_right = -12.0
+margin_bottom = -12.0
+size_flags_horizontal = 0
+size_flags_vertical = 3
+color = Color( 0.980392, 0.552941, 0.552941, 0.184314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CtrlContenu" type="Control" parent="TabContainer/CustomTab/TabBorder/TabContent"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sous-Menu" type="VBoxContainer" parent="TabContainer/CustomTab/TabBorder/TabContent/CtrlContenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SousCategories" type="HBoxContainer" parent="TabContainer/CustomTab/TabBorder/TabContent/CtrlContenu/Sous-Menu"]
+margin_right = 966.0
+margin_bottom = 33.0
+size_flags_horizontal = 5
+
+[node name="SortieSon_toggle" parent="TabContainer/CustomTab/TabBorder/TabContent/CtrlContenu/Sous-Menu/SousCategories" instance=ExtResource( 3 )]
+margin_right = 481.0
+margin_bottom = 33.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+toggle_mode = true
+pressed = true
+text = "Sortie"
+icon = SubResource( 3 )
+
+[node name="EntreSon_toggler" parent="TabContainer/CustomTab/TabBorder/TabContent/CtrlContenu/Sous-Menu/SousCategories" instance=ExtResource( 3 )]
+margin_left = 485.0
+margin_right = 966.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Entré"
+icon = SubResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/CustomTab/TabBorder/TabContent/CtrlContenu/Sous-Menu"]
+margin_top = 37.0
+margin_right = 966.0
+margin_bottom = 494.0
+size_flags_vertical = 3
+
+[node name="ScrollContainer" parent="TabContainer/CustomTab/TabBorder/TabContent/CtrlContenu/Sous-Menu/VBoxContainer" instance=ExtResource( 6 )]
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_right = 966.0
+margin_bottom = 457.0
+
+[node name="CustomTab2" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabBorder" type="ReferenceRect" parent="TabContainer/CustomTab2"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+rect_scale = Vector2( 0.993909, 0.920094 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+border_color = Color( 0.0784314, 0.0666667, 0.0666667, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContent" type="ColorRect" parent="TabContainer/CustomTab2/TabBorder"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.980392, 0.552941, 0.552941, 0.184314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CtrlContenu" type="Control" parent="TabContainer/CustomTab2/TabBorder/TabContent"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sous-Menu" type="VBoxContainer" parent="TabContainer/CustomTab2/TabBorder/TabContent/CtrlContenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SousCategories" type="HBoxContainer" parent="TabContainer/CustomTab2/TabBorder/TabContent/CtrlContenu/Sous-Menu"]
+margin_right = 988.0
+margin_bottom = 33.0
+size_flags_horizontal = 5
+
+[node name="SortieSon_toggle" parent="TabContainer/CustomTab2/TabBorder/TabContent/CtrlContenu/Sous-Menu/SousCategories" instance=ExtResource( 3 )]
+margin_right = 492.0
+margin_bottom = 33.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+toggle_mode = true
+pressed = true
+text = "Sortie"
+icon = SubResource( 3 )
+
+[node name="EntreSon_toggler" parent="TabContainer/CustomTab2/TabBorder/TabContent/CtrlContenu/Sous-Menu/SousCategories" instance=ExtResource( 3 )]
+margin_left = 496.0
+margin_right = 988.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Entré"
+icon = SubResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/CustomTab2/TabBorder/TabContent/CtrlContenu/Sous-Menu"]
+margin_top = 37.0
+margin_right = 988.0
+margin_bottom = 516.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" parent="TabContainer/CustomTab2/TabBorder/TabContent/CtrlContenu/Sous-Menu/VBoxContainer" instance=ExtResource( 6 )]
+margin_right = 988.0
+margin_bottom = 479.0
+
+[node name="CustomTab3" type="Tabs" parent="TabContainer"]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_top = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabBorder" type="ReferenceRect" parent="TabContainer/CustomTab3"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+rect_scale = Vector2( 0.993909, 0.920094 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+border_color = Color( 0.0784314, 0.0666667, 0.0666667, 1 )
+border_width = 10.0
+editor_only = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabContent" type="ColorRect" parent="TabContainer/CustomTab3/TabBorder"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 5.0
+margin_right = -5.0
+margin_bottom = -5.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+color = Color( 0.980392, 0.552941, 0.552941, 0.184314 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CtrlContenu" type="Control" parent="TabContainer/CustomTab3/TabBorder/TabContent"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 8.0
+margin_top = 8.0
+margin_right = -8.0
+margin_bottom = -8.0
+size_flags_vertical = 0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Sous-Menu" type="VBoxContainer" parent="TabContainer/CustomTab3/TabBorder/TabContent/CtrlContenu"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SousCategories" type="HBoxContainer" parent="TabContainer/CustomTab3/TabBorder/TabContent/CtrlContenu/Sous-Menu"]
+margin_right = 988.0
+margin_bottom = 33.0
+size_flags_horizontal = 5
+
+[node name="SortieSon_toggle" parent="TabContainer/CustomTab3/TabBorder/TabContent/CtrlContenu/Sous-Menu/SousCategories" instance=ExtResource( 3 )]
+margin_right = 492.0
+margin_bottom = 33.0
+grow_horizontal = 0
+grow_vertical = 0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 2 )
+toggle_mode = true
+pressed = true
+text = "Sortie"
+icon = SubResource( 3 )
+
+[node name="EntreSon_toggler" parent="TabContainer/CustomTab3/TabBorder/TabContent/CtrlContenu/Sous-Menu/SousCategories" instance=ExtResource( 3 )]
+margin_left = 496.0
+margin_right = 988.0
+margin_bottom = 33.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+custom_fonts/font = SubResource( 2 )
+text = "Entré"
+icon = SubResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TabContainer/CustomTab3/TabBorder/TabContent/CtrlContenu/Sous-Menu"]
+margin_top = 37.0
+margin_right = 988.0
+margin_bottom = 516.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ScrollContainer" parent="TabContainer/CustomTab3/TabBorder/TabContent/CtrlContenu/Sous-Menu/VBoxContainer" instance=ExtResource( 6 )]
+margin_right = 988.0
+margin_bottom = 479.0

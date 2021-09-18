@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The-Kings-Feast.mp3-84888f53e5be578e0eb1be6bb1d5ad85.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/musiqueJeu/The-Kings-Feast.mp3"
+dest_files=[ "res://.import/The-Kings-Feast.mp3-84888f53e5be578e0eb1be6bb1d5ad85.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

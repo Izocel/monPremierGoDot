@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Monster_04.mp3-482b52b190f64e9eed6d2063d9f6b93c.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Monster_04.mp3"
+dest_files=[ "res://.import/Monster_04.mp3-482b52b190f64e9eed6d2063d9f6b93c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,43 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/VolInputs.gd" type="Script" id=1]
+[ext_resource path="res://default_bus_layout.tres" type="AudioBusLayout" id=2]
+
+[node name="CustomVolSlider" type="VBoxContainer"]
+margin_left = 312.0
+margin_right = 612.0
+margin_bottom = 34.0
+size_flags_horizontal = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+Layout = ExtResource( 2 )
+CanalSortie = "MusiqueScene"
+"CannauxDisponibles/Défaults" = [ "Master", "MasterMusique", "MusiqueScene", "MusiquePNG", "MasterEntre" ]
+
+[node name="VolHGliss0" type="HSlider" parent="."]
+margin_right = 300.0
+margin_bottom = 16.0
+grow_horizontal = 0
+grow_vertical = 0
+rect_min_size = Vector2( 300, 0 )
+size_flags_horizontal = 4
+size_flags_vertical = 3
+min_value = 2.0
+value = 80.0
+rounded = true
+tick_count = 16
+ticks_on_borders = true
+
+[node name="AfficheVol0" type="Label" parent="."]
+margin_left = 142.0
+margin_top = 20.0
+margin_right = 158.0
+margin_bottom = 34.0
+size_flags_horizontal = 4
+text = "80"
+align = 1
+valign = 2
+
+[connection signal="value_changed" from="VolHGliss0" to="." method="_on_vol_changed"]

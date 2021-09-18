@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Laugh_Evil_01.mp3-0548ba60e8a78154bdce123b30654230.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Laugh_Evil_01.mp3"
+dest_files=[ "res://.import/Laugh_Evil_01.mp3-0548ba60e8a78154bdce123b30654230.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

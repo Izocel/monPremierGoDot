@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/The-Kings-Feast.mp3-5698d33bb06bd9f406b312d328bb7abc.mp3str"
+
+[deps]
+
+source_file="res://dev/audio/tounes/The-Kings-Feast.mp3"
+dest_files=[ "res://.import/The-Kings-Feast.mp3-5698d33bb06bd9f406b312d328bb7abc.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

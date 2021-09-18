@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Breath_Scared_18.mp3-e3c40737f774b720b2fd4e04ce244dc4.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Breath Scared/Breath_Scared_18.mp3"
+dest_files=[ "res://.import/Breath_Scared_18.mp3-e3c40737f774b720b2fd4e04ce244dc4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

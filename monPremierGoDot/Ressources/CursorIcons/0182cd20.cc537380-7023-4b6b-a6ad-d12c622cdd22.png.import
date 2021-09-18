@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/0182cd20.cc537380-7023-4b6b-a6ad-d12c622cdd22.png-e6e1752125bca22fe1b834d7547be067.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Ressources/CursorIcons/0182cd20.cc537380-7023-4b6b-a6ad-d12c622cdd22.png"
+dest_files=[ "res://.import/0182cd20.cc537380-7023-4b6b-a6ad-d12c622cdd22.png-e6e1752125bca22fe1b834d7547be067.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0

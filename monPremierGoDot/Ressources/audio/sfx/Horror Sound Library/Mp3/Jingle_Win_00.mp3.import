@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Jingle_Win_00.mp3-2530d68bac55c5b27e226471ad9588b7.mp3str"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Mp3/Jingle_Win_00.mp3"
+dest_files=[ "res://.import/Jingle_Win_00.mp3-2530d68bac55c5b27e226471ad9588b7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

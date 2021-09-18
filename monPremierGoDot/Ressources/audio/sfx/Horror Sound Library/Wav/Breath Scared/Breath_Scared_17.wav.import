@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Breath_Scared_17.wav-cb1cd10ba65a744f42506c8ad0983e34.sample"
+
+[deps]
+
+source_file="res://Ressources/audio/sfx/Horror Sound Library/Wav/Breath Scared/Breath_Scared_17.wav"
+dest_files=[ "res://.import/Breath_Scared_17.wav-cb1cd10ba65a744f42506c8ad0983e34.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
