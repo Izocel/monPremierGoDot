@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=28 format=2]
 
 [ext_resource path="res://Scripts/MenuPrincipal.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=2]
@@ -6,13 +6,14 @@
 [ext_resource path="res://Scenes/RectColorAnime.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/Banniere.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Scenes/Buttons/BouttonScene.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Acteur.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Personnage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Scenes/Niveau1er.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Ressources/Fonts/Consolas/static/Inconsolata/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Scenes/MenuOption.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Ressources/audio/sfx/Menu Selection Click.wav" type="AudioStream" id=12]
 [ext_resource path="res://Ressources/audio/musiqueJeu/Fantasy-Forest-Battle.mp3" type="AudioStream" id=13]
+[ext_resource path="res://Scripts/MenuBouttons.gd" type="Script" id=14]
 
 [sub_resource type="AtlasTexture" id=1]
 flags = 4
@@ -127,6 +128,8 @@ tracks/1/keys = {
 [node name="EcranTitre" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+focus_neighbour_top = NodePath("Menu/LigneCentre/Bouttons/Boutton")
+focus_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 script = ExtResource( 1 )
@@ -174,6 +177,7 @@ margin_right = 245.0
 margin_bottom = 232.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+script = ExtResource( 14 )
 
 [node name="Boutton" parent="Menu/LigneCentre/Bouttons" instance=ExtResource( 6 )]
 margin_right = 245.0
@@ -182,7 +186,9 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 icon = SubResource( 1 )
 scene_a_charger = ExtResource( 8 )
-sfx_de_focus = ExtResource( 12 )
+sfx_du_focus = ExtResource( 12 )
+couleur_texte = Color( 0.721569, 0.12549, 0.12549, 1 )
+couleur_texte_focus = Color( 1, 0.65098, 0, 1 )
 
 [node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton" index="0"]
 size_flags_horizontal = 0
@@ -194,7 +200,9 @@ margin_top = 59.0
 margin_right = 245.0
 margin_bottom = 114.0
 icon = SubResource( 2 )
-sfx_de_focus = ExtResource( 12 )
+sfx_du_focus = ExtResource( 12 )
+couleur_texte = Color( 0.721569, 0.12549, 0.12549, 1 )
+couleur_texte_focus = Color( 1, 0.65098, 0, 1 )
 
 [node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton2" index="0"]
 grow_horizontal = 0
@@ -208,6 +216,8 @@ margin_top = 118.0
 margin_right = 245.0
 margin_bottom = 173.0
 icon = SubResource( 3 )
+sfx_du_focus = ExtResource( 12 )
+couleur_texte = Color( 0.721569, 0.12549, 0.12549, 1 )
 
 [node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton3" index="0"]
 text = "Charger"
@@ -218,6 +228,8 @@ margin_right = 245.0
 margin_bottom = 232.0
 icon = SubResource( 4 )
 scene_a_charger = ExtResource( 11 )
+sfx_du_focus = ExtResource( 12 )
+couleur_texte = Color( 0.721569, 0.12549, 0.12549, 1 )
 
 [node name="Label" parent="Menu/LigneCentre/Bouttons/Boutton4" index="0"]
 text = "Options"

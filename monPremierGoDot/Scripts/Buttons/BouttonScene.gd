@@ -1,4 +1,4 @@
-extends Control
+extends Button
 
 class_name BouttonScene
 
@@ -6,13 +6,14 @@ export(PackedScene) var scene_a_charger
 
 
 export(bool) var sfx_sur_focus = true
-export(AudioStream) var sfx_de_focus = "res://Ressources/audio/sfx/click.wav"
+export(AudioStream) var sfx_du_focus
 export(String) var bus_channel = "MasterEffets"
 
 export(Color) var couleur_texte = Color.white
 export(Color) var couleur_texte_focus = Color.orange
 
 func _ready():
+	$Label.add_color_override("font_color",couleur_texte)
 	$"../../../../EffetsAudioStreamPlayer".bus = bus_channel
 	pass
 
@@ -28,7 +29,7 @@ func _on_both_focus_entered():
 	
 	if(sfx_sur_focus):
 		var streamPlayer = $"../../../../EffetsAudioStreamPlayer"
-		streamPlayer.stream = sfx_de_focus
+		streamPlayer.stream = sfx_du_focus
 		streamPlayer.volume_db = -8
 		streamPlayer.play()
 	
