@@ -4,6 +4,7 @@
 resource_name = "Capture"
 
 [resource]
+bus/0/volume_db = -26.6051
 bus/1/name = "Ambience"
 bus/1/solo = false
 bus/1/mute = false

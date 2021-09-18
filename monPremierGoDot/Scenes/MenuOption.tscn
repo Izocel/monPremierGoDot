@@ -5,7 +5,7 @@
 [ext_resource path="res://Ressources/Forest Tileset/BG/2.png" type="Texture" id=3]
 [ext_resource path="res://Scenes/RectColorAnime.tscn" type="PackedScene" id=4]
 [ext_resource path="res://Scenes/CustomTabContainer.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Scenes/Acteur.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Scenes/Personnage.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Ressources/Fonts/Consolas/static/Inconsolata/Inconsolata-SemiBold.ttf" type="DynamicFontData" id=9]
 [ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=10]
 [ext_resource path="res://Ressources/audio/musiqueJeu/Fantasy-Forest-Battle.mp3" type="AudioStream" id=13]

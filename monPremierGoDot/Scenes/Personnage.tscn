@@ -1,7 +1,7 @@
 [gd_scene load_steps=11 format=2]
 
-[ext_resource path="res://Ressources/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" type="Texture" id=1]
-[ext_resource path="res://Scripts/Personnages.gd" type="Script" id=2]
+[ext_resource path="res://Scripts/Personnages.gd" type="Script" id=1]
+[ext_resource path="res://Ressources/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" type="Texture" id=2]
 
 [sub_resource type="VisualShaderNodeVectorFunc" id=1]
 output_port_for_preview = 0
@@ -91,6 +91,7 @@ tracks/1/keys = {
 }
 
 [sub_resource type="Animation" id=7]
+loop = true
 
 [sub_resource type="Animation" id=8]
 length = 0.8
@@ -121,19 +122,25 @@ tracks/1/keys = {
 "values": [ SubResource( 4 ) ]
 }
 
-[node name="Personnage" type="KinematicBody2D"]
-position = Vector2( 499.831, 492.228 )
-script = ExtResource( 2 )
+[node name="Personnage" type="KinematicBody2D" groups=[
+"Joueur",
+]]
+position = Vector2( 7.5, -22.3333 )
+collision_layer = 524289
+collision_mask = 524289
+script = ExtResource( 1 )
+gravite = 100.0
+hauteurSaut = -5.0
 
 [node name="Sprite" type="Sprite" parent="."]
 z_index = 1
-texture = ExtResource( 1 )
+texture = ExtResource( 2 )
 hframes = 6
 vframes = 17
-frame = 4
 region_rect = Rect2( 60, 150, 90, 40 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+show_behind_parent = true
 material = SubResource( 3 )
 position = Vector2( -7, 6 )
 z_index = 1
