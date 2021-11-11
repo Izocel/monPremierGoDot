@@ -246,7 +246,6 @@ z_index = 2
 collision/safe_margin = 0.1
 vitesseMin = Vector2( 200, 200 )
 hauteurSaut = 1.0
-point_Vie_Actuel = 100.0
 
 [node name="Camera2D" type="Camera2D" parent="Personnage"]
 position = Vector2( -16, 0 )

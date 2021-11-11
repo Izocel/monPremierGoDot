@@ -5,18 +5,30 @@ func get_class(): return "Personnage"
 
 # Déclaré les variables de la classe ici.
 export var hauteurSaut = 1.0
-export var max_Point_Vie = 100
-export var point_Vie_Actuel = 100
+export var max_Point_Vie = 100.00
+export (float) var point_Vie_Actuel = max_Point_Vie
+
+
 
 var PERSO_FLOOR_NORMAL = Vector2.UP
 var direction = Vector2.ZERO
 var saut_interompu = true
 var est_Invincible = false
-
 var kunai  = preload("res://Scenes/kunai.tscn")
 
 
 #/////// FONCTIONS DE CLASSE \\\\\\\#
+
+func actionChargement() -> void:
+		print("chargement")
+		position = AlPersonnage.lire_position()
+		point_Vie_Actuel = AlPersonnage.lire_point_vie()
+		actionSauvegarde()
+
+func actionSauvegarde() -> void:
+		print("sauvegarde")
+		AlPersonnage.inscrire_position(get_position())
+		AlPersonnage.inscrire_point_vie(point_Vie_Actuel)
 
 func gestionDeplacement() -> void:
 	direction = avoir_DirectionV2()
@@ -27,7 +39,13 @@ func gestionDeplacement() -> void:
 func gestionActions() -> void:
 	if Input.is_action_just_released("ArmeLancer"):
 		lancerInstanceKunai()
-
+		
+func gestionAutoLoad() -> void:
+	if Input.is_action_just_released("ChargementRapide"):
+		actionChargement()
+	if Input.is_action_just_released("SauvegardeRapide"):
+		actionSauvegarde()
+		
 func lancerInstanceKunai() -> void:
 	var instance = kunai.instance()
 	instance.position = vecteurLancer()
@@ -138,6 +156,7 @@ func velocite_mouvement(
 
 
 func _ready() -> void:
+	actionSauvegarde()
 	animation_Apparition(3,true)
 	pass
 
@@ -145,6 +164,7 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	### Boucle détection d'actions ###
+	gestionAutoLoad()
 	gestionActions()
 	
 	#### Animations et Positionement ####
