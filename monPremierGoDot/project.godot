@@ -75,7 +75,7 @@ _global_script_class_icons={
 [application]
 
 config/name="monPremierGoDot"
-run/main_scene="res://Scenes/Niveau1er.tscn"
+run/main_scene="res://Scenes/MenuPrincipal.tscn"
 boot_splash/bg_color=Color( 0.27451, 0.305882, 0.388235, 1 )
 config/icon="res://Ressources/IconesMenu/Options.tres"
 config/Version="1.0.2"
