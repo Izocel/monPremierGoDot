@@ -6,5 +6,5 @@
 
 
 # vsCode spécification
-.gitignore
 .history/*
+/dev/ZippedSprites
