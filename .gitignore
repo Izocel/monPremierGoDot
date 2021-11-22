@@ -5,9 +5,5 @@
 # Mono-specific ignores
 
 
-
-# vsCode specific ignores
+# vsCode spécification
 .history/*
-
-# Spécification de sécurité pour la branche main
-dev/*

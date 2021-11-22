@@ -1,0 +1,37 @@
+TP2 - Jeux avec tableaux
+Due November 23, 2021 2:00 PM
+Instructions
+Le second jeux à réaliser inclu au minimum 3 talbeaux. Il est réalisé en équipe de 2 à 3 personnes
+
+Vous devez utiliser un dépôt Github privé pour le développement de votre jeux. La journée de la remise vous le rendez publique et me donnez le lien pour le cloner.
+
+Le sujet du jeux est libre, mais devra être approuvé avant sa conception.
+
+
+Interface utilisateur
+
+Menu principal
+Menu sur pause (donc il faut pouvoir faire pause!)
+Information sur les contrôles
+Information sur les indices visuels (Que fait le carré jaune qui vient d'apparaÎtre dans l'écran)
+Le premier niveau est un tutoriel qui guide l'utilisateur
+En tout temps le joueur est au courant des ressources essentiel à sa progression (points de vie, pointage, icône de power-up, etc...)
+
+
+Le jeux
+
+Comporte 2 autres niveaux au minimum
+Se joue en plein écran
+Autres critère selon l'entente sur la nature du jeux entre l'enseignant et l'équipe
+
+
+Le projet
+
+Les paramètres du jeu sont configurables par l'IDE comme dans le code (ex : vitesse du vaisseau)
+Les dossiers sont biens organisés (Scènes, ressources, scripts, etc...)
+Les scènes sont séparées selon les principes du développement orienté objet
+Le code est documenté de façon pertinente. Il est facile à comprendre
+
+Remise
+
+Le lien vers le projet sur Github

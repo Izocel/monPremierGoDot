@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/Path2DNPC.gd" type="Script" id=2]
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -192, 0, 0, 0, 0, 0, 0, 0 )
+}
+
+[node name="PatchActeurSingulier" type="Path2D"]
+curve = SubResource( 1 )
+script = ExtResource( 2 )
+
+[node name="PathFollow" type="PathFollow2D" parent="."]
+rotate = false

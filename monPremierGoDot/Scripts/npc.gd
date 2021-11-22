@@ -1,6 +1,6 @@
 extends Acteur #(KinematicsBody2D)
 class_name Npc
-
+func get_class(): return "Npc"
 
 # Déclaré les variables de la classe ici.
 
@@ -8,54 +8,42 @@ export var hauteurSaut = 1.0
 export var maxPointDeVie = 100
 export var pointDeVieActuel = 100
 
-var PERSO_FLOOR_NORMAL = Vector2.UP
-var direction = Vector2.ZERO
-var saut_interompu = true
-var est_vivant = true
-
-var kunai  = preload("res://Scenes/kunai.tscn")
-
-	
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass
+onready var PERSO_FLOOR_NORMAL = Vector2.UP
+onready var direction = Vector2.ZERO
+onready var saut_interompu = true
+onready var est_vivant = true
+onready var chemin = possedChemin()
+onready var kunai  = preload("res://Scenes/kunai.tscn")
 
 
-func _process(delta: float) -> void:
-	
-	
-	### Boucle détection d'action ###
-	loopActionInput()
-	
-	#### Animations ####
-	gestionAnimationDeplacement()
-	pass
+#///////FONCTIONS DE CLASSE \\\\\\\#
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _physics_process(_delta: float) -> void:
-	
-	direction = avoir_DirectionV2()
-	saut_interompu =  est_saut_interompu()
-	velocite = velocite_mouvement(velocite, direction, vitesseMin, saut_interompu)
-	move_and_slide(velocite, PERSO_FLOOR_NORMAL)
+func possedChemin() -> Node:
+	if(get_parent().get_class() == "PathFollow2D"):
+		return get_parent()
+	return null
 
+func get_vitesseX() -> float:
+	return vitesseMin.x
 
-
-### FONCTIONS DE CLASSE ###
 func visible_Flash(n: int) -> void:
-	for x in range(n):
+	for _x in range(n):
 		$Sprite.visible = false
 		yield(get_tree().create_timer(0.1), "timeout")
 		$Sprite.visible = true
 		yield(get_tree().create_timer(0.1), "timeout")
 
+
 func tentative_Meutre(pointAtk : float) -> bool:
 	visible_Flash(4)
 	pointDeVieActuel -= pointAtk
-	
 	print(pointDeVieActuel)
 	return true if pointDeVieActuel <=0 else false
 	
+	
+func die() -> bool:
+	queue_free()
+	return true
 	
 func loopActionInput() -> void:
 	pass
@@ -88,17 +76,15 @@ func gestionAnimationDeplacement() -> String:
 	
 	return $AnimationPlayer.current_animation
 	
-#Reflexion du HFrame selon position sourie
-##Translation du colision box du au "flip"
-func flip_horizontal_sur(pointX : float):
-	#Gauche
-	if $".".position.x + 5 <= pointX:
-		$Sprite.flip_h = false
-		$CollisionShape2D.position.x = -7.00
-	#Droite
-	if $".".position.x - 5 > pointX:
-		$Sprite.flip_h = true
-		$CollisionShape2D.position.x = 7
+func gestionDirectionNoeud() -> void:
+	if(chemin):
+		# Si l'objet suiveur a passer le point milieu
+		if(chemin.unit_offset <= 0.50):
+			$Sprite.set_flip_h(true)
+			$CollisionShape2D.position.x = 7
+		else:	
+			$Sprite.set_flip_h(false)
+			$CollisionShape2D.position.x = -7.00
 	
 func lancerKunai() -> void:
 	var sceneKunai = kunai.instance()
@@ -130,3 +116,26 @@ func velocite_mouvement(
 	if est_saut_interompu:
 		n_velocite.y = 0.0
 	return 	n_velocite
+
+	
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass
+
+
+func _process(_delta: float) -> void:
+		
+	### Boucle détection d'action ###
+	loopActionInput()
+	
+	#### Animations ####
+	gestionAnimationDeplacement()
+	gestionDirectionNoeud()
+	pass
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _physics_process(_delta: float) -> void:
+	direction = avoir_DirectionV2()
+	saut_interompu =  est_saut_interompu()
+	velocite = velocite_mouvement(velocite, direction, vitesseMin, saut_interompu)
+	move_and_slide(velocite, PERSO_FLOOR_NORMAL)
