@@ -10,6 +10,19 @@ export var vitesseMin = Vector2(333.0,333.0)
 export var gravite = 500.0
 var velocite = Vector2.ZERO
 
+func check_colision_portail_suivant() -> void:
+	var colision  = get_slide_collision(get_slide_count() - 1)
+	
+	if(colision):
+		var collider = colision.collider
+		print("col")
+	
+		if(collider.is_in_group("PortailSuivant")):
+			print(collider)
+			print("le portail changeras de scene")
+			pass
+
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body....
+func _physics_process(_delta: float) -> void:
+	check_colision_portail_suivant()
+	pass
