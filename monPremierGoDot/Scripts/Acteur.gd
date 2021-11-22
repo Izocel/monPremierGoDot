@@ -22,7 +22,7 @@ func check_colision_portail_suivant() -> void:
 			print("le portail changeras de scene")
 			pass
 
-# Called when the node enters the scene tree for the first time.
+
 func _physics_process(_delta: float) -> void:
 	check_colision_portail_suivant()
 	pass
