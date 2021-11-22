@@ -1,7 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://Scripts/Path2DNPC.gd" type="Script" id=2]
-[ext_resource path="res://Ressources/Forest Tileset/Objects/Sliced/obj_0022_Layer-23.png" type="Texture" id=3]
 
 [sub_resource type="Curve2D" id=1]
 _data = {
@@ -11,15 +10,6 @@ _data = {
 [node name="PatchActeurSingulier" type="Path2D"]
 curve = SubResource( 1 )
 script = ExtResource( 2 )
-noeudSuiveur = NodePath("PathFollow/Node2DDeboguage")
 
 [node name="PathFollow" type="PathFollow2D" parent="."]
 rotate = false
-
-[node name="Node2DDeboguage" type="Node2D" parent="PathFollow"]
-visible = false
-
-[node name="SpriteDeboguage" type="Sprite" parent="PathFollow/Node2DDeboguage"]
-visible = false
-position = Vector2( 0, -30 )
-texture = ExtResource( 3 )
