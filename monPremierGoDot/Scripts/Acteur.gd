@@ -11,16 +11,19 @@ export var gravite = 500.0
 var velocite = Vector2.ZERO
 
 func check_colision_portail_suivant() -> void:
-	var colision  = get_slide_collision(get_slide_count() - 1)
-	
-	if(colision):
-		var collider = colision.collider
-		print("col")
-	
-		if(collider.is_in_group("PortailSuivant")):
-			print(collider)
-			print("le portail changeras de scene")
-			pass
+
+	var last_slide = get_slide_count() - 1
+
+	if(last_slide >=  0):
+		var colision  = get_slide_collision(last_slide)
+		
+		if(colision):
+			var collider = colision.collider
+		
+			if(collider.is_in_group("PortailSuivant")):
+				print(collider)
+				print("le portail changeras de scene")
+				pass
 
 
 func _physics_process(_delta: float) -> void:
