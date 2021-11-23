@@ -1,7 +1,10 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Scripts/Personnages.gd" type="Script" id=1]
 [ext_resource path="res://Ressources/Warrior/SpriteSheet/Warrior_Sheet-Effect.png" type="Texture" id=2]
+[ext_resource path="res://Scripts/MenuPersonnage.gd" type="Script" id=3]
+[ext_resource path="res://Ressources/Fonts/Oswald-VariableFont_wght.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Ressources/Shikashi's Fantasy Icons Pack v2/#2 - Transparent Icons & Drop Shadow.png" type="Texture" id=7]
 
 [sub_resource type="VisualShaderNodeVectorFunc" id=1]
 output_port_for_preview = 0
@@ -122,6 +125,21 @@ tracks/1/keys = {
 "values": [ SubResource( 4 ) ]
 }
 
+[sub_resource type="DynamicFont" id=9]
+size = 24
+use_filter = true
+font_data = ExtResource( 5 )
+
+[sub_resource type="AtlasTexture" id=10]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 67, 99, 27, 28 )
+
+[sub_resource type="AtlasTexture" id=11]
+flags = 4
+atlas = ExtResource( 7 )
+region = Rect2( 355, 99, 27, 28 )
+
 [node name="Personnage" type="KinematicBody2D" groups=[
 "Joueur",
 ]]
@@ -153,3 +171,81 @@ autoplay = "Repos"
 anims/Courrir = SubResource( 6 )
 "anims/New Anim" = SubResource( 7 )
 anims/Repos = SubResource( 8 )
+
+[node name="MenuPersonnage" type="Control" parent="."]
+pause_mode = 2
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = -200.0
+margin_right = 216.0
+rect_scale = Vector2( 0.7, 0.7 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="MenuPersonnage"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.752941, 0.752941, 0.752941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MenuPersonnage"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 5.0
+margin_top = 16.0
+margin_right = -5.0
+margin_bottom = -5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MenuPersonnage/HBoxContainer"]
+margin_right = 190.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="misc1" type="Button" parent="MenuPersonnage/HBoxContainer/VBoxContainer"]
+margin_right = 190.0
+margin_bottom = 78.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 9 )
+text = "CONTINUER"
+icon = SubResource( 10 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="misc2" type="Button" parent="MenuPersonnage/HBoxContainer/VBoxContainer"]
+margin_top = 82.0
+margin_right = 190.0
+margin_bottom = 161.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 9 )
+text = "QUITTER"
+icon = SubResource( 11 )
+expand_icon = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="MenuPersonnage/HBoxContainer/VBoxContainer"]
+margin_top = 165.0
+margin_right = 190.0
+margin_bottom = 179.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Échappe pour fermer"
+align = 1
+valign = 1
+uppercase = true

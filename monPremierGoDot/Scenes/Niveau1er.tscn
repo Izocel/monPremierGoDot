@@ -286,7 +286,6 @@ hauteurSaut = 1.0
 point_Vie_Actuel = 100.0
 
 [node name="Camera2D" type="Camera2D" parent="Personnage"]
-position = Vector2( -16, 0 )
 current = true
 zoom = Vector2( 0.75, 0.75 )
 limit_left = 0
@@ -545,7 +544,7 @@ __meta__ = {
 }
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="ecranTuto/VBoxContainer/HBoxContainer3"]
-position = Vector2( 203.387, 12.6797 )
+position = Vector2( 231.714, 14.1855 )
 scale = Vector2( 0.02, 0.02 )
 frames = SubResource( 17 )
 playing = true
@@ -586,7 +585,7 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ecranTuto2/VBoxContainer"]
-margin_right = 336.0
+margin_right = 328.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -615,7 +614,7 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="ecranTuto2/VBoxContainer/HBoxContainer2"]
 margin_left = 324.0
-margin_right = 336.0
+margin_right = 328.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
