@@ -1,4 +1,4 @@
 extends Niveau
 
-class_name Niveau1er
-func get_class(): return "Niveau1er"
+class_name Niveau2e
+func get_class(): return "Niveau2e"

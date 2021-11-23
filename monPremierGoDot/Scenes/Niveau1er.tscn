@@ -583,7 +583,7 @@ __meta__ = {
 }
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="ecranTuto2/VBoxContainer"]
-margin_right = 336.0
+margin_right = 328.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
@@ -612,7 +612,7 @@ __meta__ = {
 
 [node name="TextureRect" type="TextureRect" parent="ecranTuto2/VBoxContainer/HBoxContainer2"]
 margin_left = 324.0
-margin_right = 336.0
+margin_right = 328.0
 margin_bottom = 80.0
 size_flags_horizontal = 3
 size_flags_vertical = 3

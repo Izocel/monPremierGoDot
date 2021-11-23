@@ -45,7 +45,7 @@ _global_script_classes=[ {
 "path": "res://Scripts/Niveau.gd"
 }, {
 "base": "Niveau",
-"class": "Niveau1er",
+"class": "Niveau2e",
 "language": "GDScript",
 "path": "res://Scripts/Niveau1er.gd"
 }, {
@@ -77,7 +77,7 @@ _global_script_class_icons={
 "MenuOption": "",
 "MenuPrincipal": "",
 "Niveau": "",
-"Niveau1er": "",
+"Niveau2e": "",
 "Npc": "",
 "Personnage": "",
 "Portail": "",
