@@ -14,7 +14,7 @@ export(Color) var couleur_texte_focus = Color.orange
 
 func _ready():
 	$Label.add_color_override("font_color",couleur_texte)
-	$"../../../../EffetsAudioStreamPlayer".bus = bus_channel
+	$"../../../../EffDetsAudioStreamPlayer".bus = bus_channel
 	pass
 
 
