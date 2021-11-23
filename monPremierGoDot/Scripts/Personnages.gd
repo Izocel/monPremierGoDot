@@ -9,7 +9,6 @@ export var max_Point_Vie = 100.00
 export (float) var point_Vie_Actuel = max_Point_Vie
 
 
-
 var PERSO_FLOOR_NORMAL = Vector2.UP
 var direction = Vector2.ZERO
 var saut_interompu = true
