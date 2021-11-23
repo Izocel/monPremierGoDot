@@ -66,7 +66,7 @@ func gestionAnimationDeplacement() -> String:
 		$AnimationPlayer.play("Repos")
 	return $AnimationPlayer.current_animation
 	
-	
+
 
 func flashAnimation(delaiSec : float) -> void:
 	var termine = get_tree().create_timer(delaiSec)
