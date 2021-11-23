@@ -437,6 +437,7 @@ vitesseMin = Vector2( 200, 200 )
 gravite = 200.0
 
 [node name="ColorRect" parent="." instance=ExtResource( 4 )]
+visible = false
 
 [node name="MusicAudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 13 )
