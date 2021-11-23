@@ -23,7 +23,6 @@ func _process(delta):
 	
 
 func _on_both_focus_entered():
-	print("Mouse: Enter")
 	$Label.uppercase = true
 	$Label.add_color_override("font_color",couleur_texte_focus)
 	
@@ -34,6 +33,5 @@ func _on_both_focus_entered():
 		streamPlayer.play()
 	
 func _on_both_focus_exited():
-	print("Mouse: Out")
 	$Label.uppercase = false
 	$Label.add_color_override("font_color",couleur_texte)

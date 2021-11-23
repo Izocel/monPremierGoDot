@@ -1,11 +1,11 @@
 extends TileMap
-
 class_name Portail
 func get_class(): return "Portail"
 
+
+
 export(PackedScene) var scene_a_charger
 export(Array) var groupes_approuver = ["Acteur", "Personnage"]
-
 
 func as_right_of_teleportation(body_class:String) -> bool:
 	

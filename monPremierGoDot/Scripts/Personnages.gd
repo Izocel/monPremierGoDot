@@ -9,8 +9,6 @@ export var max_Point_Vie = 100.00
 export (float) var point_Vie_Actuel = max_Point_Vie
 
 
-
-
 var PERSO_FLOOR_NORMAL = Vector2.UP
 var direction = Vector2.ZERO
 var saut_interompu = true
@@ -19,7 +17,6 @@ var kunai  = preload("res://Scenes/kunai.tscn")
 
 
 #/////// FONCTIONS DE CLASSE \\\\\\\#
-
 
 func actionChargement() -> void:
 		print("chargement")
@@ -67,8 +64,8 @@ func gestionAnimationDeplacement() -> String:
 	else:
 		$AnimationPlayer.play("Repos")
 	return $AnimationPlayer.current_animation
-	
-	
+
+
 
 func flashAnimation(delaiSec : float) -> void:
 	var termine = get_tree().create_timer(delaiSec)
