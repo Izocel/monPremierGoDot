@@ -18,7 +18,7 @@ func as_right_of_teleportation(body_class:String) -> bool:
 
 func teleport_body(body:Node) -> void:
 	
-    # Le body sera un Acteur ou un personnage ? C'est la srprisssseeeeeee !!!!
+	# Le body sera un Acteur ou un personnage ? C'est la srprisssseeeeeee !!!!
 	print(body.get_class())
 	var body_class = body.get_class()
 	var as_right = false
